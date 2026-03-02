@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Welcome from './Welcome'; // The new welcome page
+import Dashboard from './Dashboard'; // The IoT monitoring dashboard
+import Navbar from './Navbar';
 import './App.css';
 
 function App() {
+  const [showDashboard, setShowDashboard] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!showDashboard ? (
+        // When user clicks 'Explore' on welcome page, it links to dashboard
+        <Welcome onStart={() => setShowDashboard(true)} />
+      ) : (
+        <>
+          <Navbar />
+          <Dashboard />
+        </>
+      )}
     </div>
   );
 }

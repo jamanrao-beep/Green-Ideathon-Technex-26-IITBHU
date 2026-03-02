@@ -1,0 +1,153 @@
+.welcome-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0a1e3d 0%, #020c1b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* --- Waves Nudged Down for Better Framing --- */
+.water-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.wave-wrap {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x;
+  position: absolute;
+  width: 6400px;
+  height: 350px;
+  filter: hue-rotate(190deg) brightness(1.3) saturate(1.5); 
+  opacity: 0.45; 
+}
+
+/* Nudged these values down by 5-10% */
+.wave-1 { top: 0%; animation: flowRight 30s linear infinite; }
+.wave-2 { top: 45%; animation: flowLeft 20s linear infinite; opacity: 0.15; }
+.wave-3 { bottom: -15%; animation: flowRight 25s linear infinite; }
+
+@keyframes flowRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1600px); }
+}
+
+@keyframes flowLeft {
+  0% { transform: translateX(-1600px); }
+  100% { transform: translateX(0); }
+}
+
+/* --- The Assembling Console --- */
+.glass-console {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 650px;
+  min-height: 400px;
+  background: rgba(10, 25, 47, 0.7); 
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  /* Ultra-smooth fade */
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-console.active {
+  opacity: 1;
+}
+
+/* --- Refined Border Transitions (Top-Down) --- */
+.border-line {
+  position: absolute;
+  background: #00f3ff;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
+  transform: translateY(-700px); /* Increased distance for a more elegant drop */
+  transition: transform 1.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.top { top: 0; left: 0; width: 100%; height: 2px; transition-delay: 0.1s; }
+.right { top: 0; right: 0; width: 2px; height: 100%; transition-delay: 0.2s; }
+.left { top: 0; left: 0; width: 2px; height: 100%; transition-delay: 0.35s; }
+.bottom { bottom: 0; left: 0; width: 100%; height: 2px; transition-delay: 0.5s; }
+
+.active .border-line {
+  transform: translateY(0);
+}
+
+/* --- Smoother Text Entry --- */
+.text-content {
+  opacity: 0;
+  transform: translateY(-10px);
+  /* Appears with a soft glide after the box is built */
+  transition: transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.9s,
+              opacity 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.9s;
+}
+
+.active .text-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event-brand {
+  color: #00f3ff;
+  letter-spacing: 14px; /* Increased for a more premium look */
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.theme-subtitle {
+  color: #3b82f6;
+  font-size: 0.85rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* --- Late & Smooth Button Entry --- */
+.action-area {
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(40px); /* Smaller movement is smoother */
+  transition: transform 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s,
+              opacity 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s;
+}
+
+.active .action-area {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.neon-btn {
+  background: transparent;
+  color: #00f3ff;
+  border: 1px solid #00f3ff;
+  padding: 16px 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-transform: uppercase;
+}
+
+.neon-btn:hover {
+  background: #00f3ff;
+  color: #0a192f;
+  box-shadow: 0 0 50px #00f3ff;
+  transform: translateY(-2px);
+}
