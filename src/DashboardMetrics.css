@@ -1,31 +1,314 @@
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.dashboard-root {
+  min-height: 100vh;
+  /* Deep Sapphire Gradient - No Black */
+  background: radial-gradient(circle at center, #0a1e3d 0%, #020c1b 100%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.glass-card {
-  background: var(--glass-bg);
+.dashboard-root.fade-in {
+  opacity: 1;
+}
+
+/* Glassmorphism Navigation */
+.dash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(10, 25, 47, 0.8);
+  /* Added vendor prefix to fix the red line warning */
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s ease;
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
 }
 
-.glass-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--primary-green);
+.nav-brand {
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #00f3ff; /* Electric Cyan */
 }
 
-/* Tablet & Mobile Adjustments */
-@media (max-width: 1024px) {
-  .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+/* Metrics Grid - Fully Responsive */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 5%;
 }
 
-@media (max-width: 600px) {
-  .dashboard-grid { grid-template-columns: 1fr; }
-  .live-value { font-size: 1.5rem; }
+/* Individual Metric Cards */
+.metric-card {
+  background: rgba(16, 34, 63, 0.6);
+  border: 1px solid rgba(0, 243, 255, 0.1);
+  padding: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Smoother landing animation */
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in .metric-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered entry timing for smoother appearance */
+.drop-1 { transition-delay: 0.2s; }
+.drop-2 { transition-delay: 0.4s; }
+.drop-3 { transition-delay: 0.6s; }
+.drop-4 { transition-delay: 0.8s; }
+
+.metric-card:hover {
+  border-color: #00f3ff;
+  background: rgba(16, 34, 63, 0.9);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+}
+
+.stat {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.card-info span {
+  font-size: 0.75rem;
+  color: #3b82f6; /* Royal Blue */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Custom Icon Colors */
+.icon-blue { color: #3b82f6; }
+.icon-cyan { color: #00f3ff; }
+.icon-gold { color: #fbbf24; }
+.icon-purple { color: #a855f7; }
+
+@media (max-width: 768px) {
+  .metrics-grid { grid-template-columns: 1fr; }
+  .stat { font-size: 1.6rem; }
+}
+
+.dashboard-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #062c1e 0%, #010a08 100%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.dashboard-root.fade-in { opacity: 1; }
+
+/* Navigation Styling */
+.dash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(6, 44, 30, 0.8);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  color: #a7f3d0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.nav-menu li:hover { color: #10b981; }
+
+/* Grid Structure: 2 Boxes per Row */
+.metrics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 10%;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Emerald Themed Cards */
+.metric-card {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.metric-card:hover {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
+  transform: translateY(-5px);
+}
+
+.icon-emerald { color: #10b981; width: 32px; height: 32px; }
+
+.stat {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.card-info span {
+  font-size: 0.8rem;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pulse-emerald {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+  margin-right: 10px;
+}
+
+/* Tablet & Mobile: Stack to 1 column */
+@media (max-width: 900px) {
+  .metrics-row { grid-template-columns: 1fr; }
+  .nav-menu { display: none; }
+}
+
+.dashboard-root {
+  min-height: 100vh;
+  /* Deep Forest Background [cite: 1] */
+  background: radial-gradient(circle at center, #062c1e 0%, #010a08 100%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.dashboard-root.fade-in { opacity: 1; }
+
+/* Fixed Navbar with prefixes for Red Line errors */
+.dash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(6, 44, 30, 0.8);
+  
+  /* Fixes the red line error */
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  
+  /* Fixes the sticky error if used in a scroll context */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  color: #a7f3d0;
+  font-size: 0.9rem;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-menu li:hover { color: #10b981; }
+
+/* 2-Box-Per-Row Layout [cite: 10, 11] */
+.metrics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 10%;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Emerald Themed Cards */
+.metric-card {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.metric-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+  transform: translateY(-5px);
+}
+
+.icon-emerald { color: #10b981; width: 32px; height: 32px; }
+
+.stat {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.card-info span {
+  font-size: 0.8rem;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pulse-emerald {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .metrics-row { grid-template-columns: 1fr; }
+  .nav-menu { display: none; }
 }

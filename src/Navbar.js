@@ -1,21 +1,22 @@
 import React from 'react';
 import './Navbar.css';
+// Import the logo directly from the src folder
+import logo from 'logo.svg';
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="nav-logo">
-                <span className="logo-text">Jal Sanrakshan Buddhi</span>
+            <div className="nav-brand">
+                {/* Use the imported variable {logo} here */}
+                <img src={logo} alt="Logo" className="nav-logo-img" />
+                <h1 className="nav-title">JAL SANRAKSHAN BUDDHI</h1>
             </div>
+
             <ul className="nav-links">
-                <li><a href="#welcome">Home</a></li>
-                <li><a href="#dashboard">IoT Dashboard</a></li>
-                <li><a href="#about">Our Team</a></li>
+                <li>Home</li>
+                <li>Hardware</li>
+                <li>About Us</li>
             </ul>
-            <div className="nav-status">
-                <span className="status-indicator"></span>
-                System: Active
-            </div>
         </nav>
     );
 };

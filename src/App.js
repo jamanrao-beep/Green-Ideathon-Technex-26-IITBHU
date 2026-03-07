@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
-import Welcome from './Welcome'; // The new welcome page
-import Dashboard from './Dashboard'; // The IoT monitoring dashboard
-import Navbar from './Navbar';
+import Welcome from './Welcome';
+import Dashboard from './Dashboard';
 import './App.css';
 
 function App() {
-  const [showDashboard, setShowDashboard] = useState(false);
+  const [systemInitialized, setSystemInitialized] = useState(false);
 
   return (
     <div className="App">
-      {!showDashboard ? (
-        // When user clicks 'Explore' on welcome page, it links to dashboard
-        <Welcome onStart={() => setShowDashboard(true)} />
+      {!systemInitialized ? (
+        <Welcome onStart={() => setSystemInitialized(true)} />
       ) : (
-        <>
-          <Navbar />
-          <Dashboard />
-        </>
+        <Dashboard />
       )}
     </div>
   );
