@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
 import Navbar from './Navbar';
-import amanPhoto from './2501EE41.jpeg';
+import amanPhoto from './Aman.jpeg';
 import nehaPhoto from './neha.jpeg';
 import mahaPhoto from './mahalakshmi.png';
 import krishnaPhoto from './KTA.jpg';
