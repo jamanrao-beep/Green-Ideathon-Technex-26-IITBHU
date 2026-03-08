@@ -48,6 +48,44 @@ const Dashboard = () => {
                         </div>
                     </div>
 
+                    {/* FEASIBILITY COMPARISON SECTION */}
+                    <div className="feasibility-container">
+                        <h3 className="emerald-text">Efficiency Comparison: Liquid vs. Air Cooling</h3>
+                        <div className="comparison-table-wrapper">
+                            <table className="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>Traditional Air Cooling</th>
+                                        <th>Jal Sanrakshan Buddhi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Water Consumption</td>
+                                        <td>High (Evaporative Loss)</td>
+                                        <td>Zero (Closed-Loop) [cite: 32, 94]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Heat Management</td>
+                                        <td>Vented/Wasted</td>
+                                        <td>Recovered as Energy Asset [cite: 33, 98]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cooling Precision</td>
+                                        <td>Ambient/Rack Level</td>
+                                        <td>Surgical Direct-to-Chip [cite: 26, 73]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Operational Mode</td>
+                                        <td>Constant/Manual</td>
+                                        <td>Autonomous AI-Regulated [cite: 86, 144]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                     {/* LAYER 2: New Technical & Sustainability Integration */}
                     <div className="metric-card full-width innovation-gradient">
                         <div className="innovation-content">

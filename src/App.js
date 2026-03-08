@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Welcome from './Welcome';
 import Dashboard from './Dashboard';
-import NexusAI from './nexusAI.js';
+import CoreInnovation from './CoreInnovation.js';
 import './App.css';
 import Architecture from './Architecture';
 import AboutUs from './AboutUs';
@@ -26,8 +26,8 @@ function App() {
           />
 
           <Route
-            path="/nexus-ai"
-            element={isInitialized ? <NexusAI /> : <Navigate to="/" />}
+            path="/core-innovation"
+            element={isInitialized ? <CoreInnovation /> : <Navigate to="/" />}
           />
 
           <Route

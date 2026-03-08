@@ -1,0 +1,196 @@
+/* CoreInnovation.css */
+
+/* 1. Main Layout & 2x2 Grid */
+.innovation-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Strict 2-column layout */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.innovation-card {
+    background: linear-gradient(145deg, #041f18, #052920);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    position: relative;
+    transition: all 0.4s ease;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Fix for red lines */
+}
+
+.innovation-card:hover {
+    transform: translateY(-10px);
+    border-color: #10b981;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card-step {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(16, 185, 129, 0.1);
+}
+
+/* 2. Kinetic System Schematic (The "Nice" Diagram) */
+.tech-schematic-container {
+    position: relative;
+    background: radial-gradient(circle at center, #062d24 0%, #02110d 100%);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 40px;
+    padding: 80px 40px;
+    margin: 60px auto;
+    overflow: hidden;
+    max-width: 1100px;
+}
+
+.grid-overlay {
+    position: absolute;
+    /* Replacing inset: 0 to clear red lines */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.schematic-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.node {
+    background: rgba(4, 31, 24, 0.8);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.hydraulic-loop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 40px;
+}
+
+/* Conduit / Pipe Logic */
+.conduit {
+    background: rgba(16, 185, 129, 0.1);
+    position: relative;
+}
+
+.conduit-horizontal {
+    width: 80px;
+    height: 4px;
+}
+
+.coolant-pulse {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    background: linear-gradient(90deg, transparent, #10b981, transparent);
+    filter: blur(2px);
+    animation: flowRight 2s infinite linear;
+}
+
+@keyframes flowRight {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+/* 3. Deep Dive Detailed Sections */
+.technical-deep-dive {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: left;
+}
+
+.step-detail {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(16, 185, 129, 0.03);
+    border-left: 3px solid #10b981;
+    border-radius: 0 15px 15px 0;
+    transition: background 0.3s ease;
+}
+
+.step-detail:hover {
+    background: rgba(16, 185, 129, 0.07);
+}
+
+.step-detail h2 {
+    font-size: 1.4rem;
+    color: #10b981;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.step-detail p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .innovation-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+    .hydraulic-loop {
+        flex-direction: column;
+    }
+    .conduit-horizontal {
+        width: 4px;
+        height: 40px;
+    }
+}
+
+/* CoreInnovation.css Updates */
+
+.innovation-card h3 {
+    color: #10b981; /* Precise Emerald Greenish color */
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(6, 18, 26, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-table th {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 15px;
+    text-align: left;
+}
+
+.comparison-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+    color: #cbd5e1;
+}
