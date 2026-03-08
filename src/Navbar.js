@@ -11,11 +11,10 @@ const Navbar = () => {
                 <h1 className="nav-title">JAL SANRAKSHAN BUDDHI</h1>
             </div>
             <ul className="nav-links">
-                {/* Link to /dashboard instead of / */}
                 <li><Link to="/dashboard">Home</Link></li>
                 <li><Link to="/nexus-ai">Nexus AI</Link></li>
-                <li>Architecture</li>
-                <li>About Us</li>
+                <li><Link to="/architecture">Architecture</Link></li>
+                <li><Link to="/about-us">About Us</Link></li>
             </ul>
         </nav>
     );

@@ -4,6 +4,8 @@ import Welcome from './Welcome';
 import Dashboard from './Dashboard';
 import NexusAI from './nexusAI.js';
 import './App.css';
+import Architecture from './Architecture';
+import AboutUs from './AboutUs';
 
 function App() {
   const [isInitialized, setIsInitialized] = useState(false);
@@ -27,6 +29,16 @@ function App() {
             path="/nexus-ai"
             element={isInitialized ? <NexusAI /> : <Navigate to="/" />}
           />
+
+          <Route
+            path="/architecture"
+            element={isInitialized ? <Architecture /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/about-us"
+            element={isInitialized ? <AboutUs /> : <Navigate to="/" />}
+          />
+
         </Routes>
       </div>
     </Router>
