@@ -78,6 +78,18 @@ const Architecture = () => {
                         </table>
                     </div>
                 </section>
+
+                {/* LAYER 2: New Technical & Sustainability Integration */}
+                <div className="metric-card full-width innovation-gradient">
+                    <div className="innovation-content">
+                        <div className="innovation-text">
+                            <h3>Core Innovation: Closed-Loop Architecture</h3>
+                            <p>A fully recirculating hydraulic circuit: <strong>Pump → Cooling Block → Thermal Bank → Pump</strong>.</p>
+                            <p>Engineered for zero evaporation loss and zero wastewater discharge.</p>
+                        </div>
+                        <div className="eco-shield">🌿</div>
+                    </div>
+                </div>
             </main>
 
             <Footer />

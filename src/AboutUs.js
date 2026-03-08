@@ -20,7 +20,8 @@ const AboutUs = ({ backgroundImage }) => {
                 }}
             >
                 <div>
-                    <h1 className="about-title">Green Ideathon | Technex '26</h1>
+                    <h1 className="about-title">Green Ideathon</h1>
+                    <h1 className="about-title">Technex '26</h1>
                     <div className="about-subtitle">Jal Sanrakshan Buddhi: Direct-to-Chip Cooling</div>
                     <p className="about-desc">
                         Developing a sustainable, closed-loop thermal management system for data centers. By integrating

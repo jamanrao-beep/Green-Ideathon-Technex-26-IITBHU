@@ -99,10 +99,51 @@ const CoreInnovation = () => {
 
                 </div>
 
+                {/* EFFICIENCY COMPARISON: LIQUID vs. AIR */}
+                <section className="efficiency-comparison-section">
+                    <h2 className="emerald-text">Engineering Feasibility: Liquid vs. Air Cooling</h2>
+                    <div className="comparison-table-wrapper">
+                        <table className="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Traditional Air Cooling</th>
+                                    <th>Jal Sanrakshan Buddhi (Liquid)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Water Consumption</strong></td>
+                                    <td>High (Evaporation & Discharge)</td>
+                                    <td>Zero (Closed-Loop Retained)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Heat Recovery</strong></td>
+                                    <td>Vented as Waste Heat</td>
+                                    <td>Captured as Energy Asset</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cooling Precision</strong></td>
+                                    <td>Ambient Rack Level</td>
+                                    <td>Surgical Direct-to-Chip</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Operational Logic</strong></td>
+                                    <td>Manual/Constant Run</td>
+                                    <td>Autonomous AI-Regulated</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="feasibility-note">
+                        *Based on technical feasibility standards for industry-validated IoT microcontrollers and closed-loop hydraulic systems[cite: 67, 70, 72].
+                    </div>
+                </section>
+
                 {/* KINETIC SYSTEM SCHEMATIC */}
                 <div className="tech-schematic-container">
                     <div className="grid-overlay"></div>
-                    <h2 className="schematic-header">Plan</h2>
+                    <h1 className="schematic-header">Schematic Representation</h1>
 
                     <div className="schematic-layout">
                         {/* Step 1: Intelligence Hub */}

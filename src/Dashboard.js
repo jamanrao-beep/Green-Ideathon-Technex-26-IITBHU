@@ -22,7 +22,7 @@ const Dashboard = () => {
                     <div className="metrics-row">
                         <div className="metric-card pulse-border">
                             <div className="card-info">
-                                <h3>Cooling Flow</h3>
+                                <h2>Cooling Flow</h2>
                                 <p className="stat">2.4 L/min</p>
                                 <div className="flow-bar"><div className="flow-progress"></div></div>
                                 <span>YF-S201 Active</span>
@@ -30,62 +30,24 @@ const Dashboard = () => {
                         </div>
                         <div className="metric-card">
                             <div className="card-info">
-                                <h3>AI Model</h3>
+                                <h2>AI Model</h2>
                                 <p className="stat">LSTM-v2</p>
                                 <span>Predictive Analysis</span>
                             </div>
                         </div>
                         <div className="metric-card">
                             <div className="card-info">
-                                <h3>Thermal Bank</h3>
+                                <h2>Thermal Bank</h2>
                                 <p className="stat">42°C</p>
                                 <span>Energy Recovery</span>
                             </div>
                         </div>
                         <div className="metric-card">
                             <div className="card-info">
-                                <h3>Chip Temp</h3>
+                                <h2>Chip Temp</h2>
                                 <p className="stat">38°C</p>
                                 <span>DS18B20 Array</span>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* FEASIBILITY COMPARISON SECTION */}
-                    <div className="feasibility-container">
-                        <h3 className="emerald-text">Efficiency Comparison: Liquid vs. Air Cooling</h3>
-                        <div className="comparison-table-wrapper">
-                            <table className="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Metric</th>
-                                        <th>Traditional Air Cooling</th>
-                                        <th>Jal Sanrakshan Buddhi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Water Consumption</td>
-                                        <td>High (Evaporative Loss)</td>
-                                        <td>Zero (Closed-Loop) [cite: 32, 94]</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Heat Management</td>
-                                        <td>Vented/Wasted</td>
-                                        <td>Recovered as Energy Asset [cite: 33, 98]</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cooling Precision</td>
-                                        <td>Ambient/Rack Level</td>
-                                        <td>Surgical Direct-to-Chip [cite: 26, 73]</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Operational Mode</td>
-                                        <td>Constant/Manual</td>
-                                        <td>Autonomous AI-Regulated [cite: 86, 144]</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
 
@@ -114,18 +76,6 @@ const Dashboard = () => {
                         <p className="meter-footnote">
                             *Calculated based on the Closed-Loop Direct Cooling architecture which eliminates freshwater addition and discharge[cite: 29, 31, 32].
                         </p>
-                    </div>
-
-                    {/* LAYER 2: New Technical & Sustainability Integration */}
-                    <div className="metric-card full-width innovation-gradient">
-                        <div className="innovation-content">
-                            <div className="innovation-text">
-                                <h3>Core Innovation: Closed-Loop Architecture</h3>
-                                <p>A fully recirculating hydraulic circuit: <strong>Pump → Cooling Block → Thermal Bank → Pump</strong>.</p>
-                                <p>Engineered for zero evaporation loss and zero wastewater discharge.</p>
-                            </div>
-                            <div className="eco-shield">🌿</div>
-                        </div>
                     </div>
 
                     <div className="metrics-row">
