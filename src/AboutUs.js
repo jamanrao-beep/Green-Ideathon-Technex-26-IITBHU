@@ -5,6 +5,7 @@ import amanPhoto from './2501EE41.jpeg';
 import nehaPhoto from './neha.jpeg';
 import mahaPhoto from './mahalakshmi.png';
 import krishnaPhoto from './KTA.jpg';
+import Footer from './Footer';
 
 const AboutUs = ({ backgroundImage }) => {
     return (
@@ -148,6 +149,7 @@ const AboutUs = ({ backgroundImage }) => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

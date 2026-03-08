@@ -1,0 +1,113 @@
+/* Architecture.css */
+
+.arch-section {
+    margin-bottom: 60px;
+    padding: 0 5%;
+}
+
+.section-subtitle {
+    color: #10b981;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    border-left: 4px solid #10b981;
+    padding-left: 15px;
+}
+
+/* Data Flow Styles */
+.flow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(16, 185, 129, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.flow-step {
+    text-align: center;
+    flex: 1;
+}
+
+.flow-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.4));
+}
+
+.flow-arrow {
+    color: #10b981;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: pulseArrow 1.5s infinite;
+}
+
+@keyframes pulseArrow {
+    0%, 100% { opacity: 0.3; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(5px); }
+}
+
+/* Specs Table Styles */
+.specs-table-container {
+    overflow-x: auto;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(6, 18, 26, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.specs-table th {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    text-align: left;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.specs-table td {
+    padding: 20px;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+    color: #e2e8f0;
+}
+
+.specs-table tr:hover {
+    background: rgba(16, 185, 129, 0.05);
+}
+
+@media (max-width: 768px) {
+    .flow-container { flex-direction: column; gap: 20px; }
+    .flow-arrow { transform: rotate(90deg); }
+}
+
+.logic-list {
+    text-align: left;
+    color: #cbd5e1;
+    line-height: 2;
+    padding-left: 20px;
+}
+
+.logic-list li {
+    list-style-type: "✔ ";
+    color: #10b981;
+}
+
+.flow-description {
+    margin-top: 20px;
+    color: #a7f3d0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.roadmap-preview {
+    border-top: 1px solid rgba(16, 185, 129, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+}

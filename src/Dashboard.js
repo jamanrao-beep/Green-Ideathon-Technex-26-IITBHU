@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar'; // Import your separate Navbar
 import { Thermometer, Droplets, Zap, Activity } from 'lucide-react';
 import './DashboardMetrics.css';
+import Footer from './Footer';
 
 const Dashboard = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -62,6 +63,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </main>
+            <Footer />
         </div>
     );
 };
