@@ -90,3 +90,69 @@
     height: 35px;
   }
 }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-links li {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* This targets the text specifically, whether it's a Link or just text */
+.nav-links li, 
+.nav-links li a {
+  text-decoration: none;
+  color: #a7f3d0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+/* Unified Hover Effect for all items */
+.nav-links li:hover,
+.nav-links li a:hover {
+  color: #10b981;
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+/* The Animated Underline for all */
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5%;
+  background: rgba(1, 10, 25, 0.9); /* Slightly darker for better contrast */
+  
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+  /* Change this line to be darker/subtle */
+  border-bottom: 1px solid rgba(16, 185, 129, 0.15); 
+  z-index: 1000;
+}

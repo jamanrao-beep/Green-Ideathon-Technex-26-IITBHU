@@ -111,16 +111,16 @@
 }
 
 .theme-subtitle {
-  color: #3b82f6;
-  font-size: 0.85rem;
-  letter-spacing: 5px;
-  font-weight: 600;
-  margin-top: 15px;
+    margin-bottom: 15px; /* Reduced from 30px or default */
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: #a7f3d0;
+    opacity: 0.8;
 }
 
 /* --- Late & Smooth Button Entry --- */
 .action-area {
-  margin-top: 50px;
+  margin-top: 25px;
   opacity: 0;
   transform: translateY(40px); /* Smaller movement is smoother */
   transition: transform 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s,
@@ -150,4 +150,57 @@
   color: #0a192f;
   box-shadow: 0 0 50px #00f3ff;
   transform: translateY(-2px);
+}
+
+/* Decreased space between logo and title */
+.welcome-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px; /* Reduced from 20px to 5px */
+    filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.6));
+}
+
+.hero-title {
+    margin-top: 0; /* Remove top margin to pull it closer to logo */
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* Button Animations */
+.enter-btn {
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: 800;
+    background: transparent;
+    color: #00f3ff;
+    border: 2px solid #00f3ff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* The scanning/fill effect */
+.enter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.4), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.enter-btn:hover::before {
+    left: 100%;
+}
+
+.enter-btn:hover {
+    box-shadow: 0 0 20px #00f3ff;
+    background: rgba(0, 243, 255, 0.1);
+    transform: scale(1.05);
 }
