@@ -2,11 +2,14 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './DashboardMetrics.css';
+import ThermalAlert from './ThermalAlert';
 
 const Dashboard = () => {
     return (
         <div className="dashboard-root fade-in">
             <Navbar />
+
+            <ThermalAlert />
 
             <main className="dash-content">
                 <header className="content-header">
@@ -84,6 +87,33 @@ const Dashboard = () => {
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+
+                    {/* SUSTAINABILITY SCORE METER */}
+                    <div className="sustainability-meter-container">
+                        <h3 className="emerald-text">Sustainability Impact Score</h3>
+                        <div className="meter-wrapper">
+                            <div className="meter-base">
+                                <div className="meter-fill" style={{ width: '100%' }}></div>
+                            </div>
+                            <div className="meter-labels">
+                                <div className="meter-stat">
+                                    <span className="stat-value">100%</span>
+                                    <span className="stat-desc">Water Retention [cite: 94]</span>
+                                </div>
+                                <div className="meter-stat">
+                                    <span className="stat-value">0%</span>
+                                    <span className="stat-desc">Evaporation Loss [cite: 30, 96]</span>
+                                </div>
+                                <div className="meter-stat highlight-stat">
+                                    <span className="stat-value">ACTIVE</span>
+                                    <span className="stat-desc">Heat Recovery [cite: 33, 98]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p className="meter-footnote">
+                            *Calculated based on the Closed-Loop Direct Cooling architecture which eliminates freshwater addition and discharge[cite: 29, 31, 32].
+                        </p>
                     </div>
 
                     {/* LAYER 2: New Technical & Sustainability Integration */}

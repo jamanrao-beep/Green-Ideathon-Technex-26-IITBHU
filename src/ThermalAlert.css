@@ -1,0 +1,54 @@
+.alert-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.alert-box {
+    background: #0a0a0a;
+    border: 2px solid #ef4444; /* Alert Red */
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 350px;
+    color: #f8fafc;
+}
+
+.alert-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ef4444;
+    margin-bottom: 10px;
+}
+
+.alert-action {
+    background: rgba(239, 68, 68, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin: 15px 0;
+    border-left: 3px solid #ef4444;
+}
+
+.action-tag {
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.dismiss-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
