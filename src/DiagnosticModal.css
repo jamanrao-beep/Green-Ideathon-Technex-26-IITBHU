@@ -1,0 +1,97 @@
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.diagnostic-card {
+    background: #010a08;
+    border: 1px solid #10b981;
+    width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: rgba(16, 185, 129, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.modal-header h3 { color: #10b981; font-size: 0.9rem; margin: 0; letter-spacing: 2px; }
+.close-btn { background: none; border: none; color: #94a3b8; font-size: 1.5rem; cursor: pointer; }
+
+.modal-body { padding: 30px; }
+
+/* Wireframe Visual */
+.scan-visual {
+    width: 100%;
+    height: 120px;
+    background: rgba(16, 185, 129, 0.05);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wireframe-rack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 150px;
+}
+
+.rack-unit {
+    height: 10px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #10b981;
+    box-shadow: 0 0 15px #10b981;
+    top: 0;
+    animation: scanMove 2s linear infinite;
+}
+
+@keyframes scanMove {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+/* Checklist Styling */
+.step-item {
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.step-item.complete { color: #cbd5e1; }
+.status-icon { margin-right: 15px; color: #10b981; }
+.done-tag { margin-left: auto; color: #10b981; font-weight: bold; }
+
+.modal-footer {
+    padding: 20px;
+    background: rgba(16, 185, 129, 0.05);
+    text-align: center;
+}
+
+.score-num { color: #10b981; font-weight: bold; text-shadow: 0 0 10px #10b981; }
