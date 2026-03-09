@@ -490,3 +490,144 @@
     margin-top: 20px;
     font-style: italic;
 }
+
+.telemetry-bar {
+    background: #010a08;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.blink-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #10b981;
+    border-radius: 50%;
+    margin-right: 12px;
+    animation: pulse-glow 1.5s infinite;
+    box-shadow: 0 0 10px #10b981;
+}
+
+@keyframes pulse-glow {
+    0% { transform: scale(0.9); opacity: 0.4; box-shadow: 0 0 0px #10b981; }
+    50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 15px #10b981; }
+    100% { transform: scale(0.9); opacity: 0.4; box-shadow: 0 0 0px #10b981; }
+}
+
+.ticker-wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.ticker-item {
+    letter-spacing: 1px;
+}
+
+.ticker-separator {
+    color: rgba(16, 185, 129, 0.3);
+}
+
+.green-glow {
+    color: #10b981;
+    text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.status-text {
+    letter-spacing: 2px;
+}
+
+/* Control Panel Card */
+.control-panel-card {
+    background: linear-gradient(145deg, #05261e, #031a14);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.control-info h3 {
+    color: #10b981;
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.control-info p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 5px 0 0 0;
+}
+
+/* The Switch Logic */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mode-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #475569;
+    transition: 0.3s;
+}
+
+.active-green { color: #10b981; text-shadow: 0 0 10px #10b981; }
+.active-orange { color: #f97316; text-shadow: 0 0 10px #f97316; }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #1e293b;
+    transition: .4s;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; width: 16px;
+    left: 4px; bottom: 3px;
+    background-color: #94a3b8;
+    transition: .4s;
+}
+
+input:checked + .slider { background-color: #064e3b; border-color: #f97316; }
+input:checked + .slider:before { transform: translateX(26px); background-color: #f97316; }
+
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+/* Extra Glow for Manual Mode */
+.orange-glow {
+    color: #f97316;
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+}

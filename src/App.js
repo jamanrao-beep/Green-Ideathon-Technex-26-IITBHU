@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Welcome from './Welcome';
 import Dashboard from './Dashboard';
@@ -9,6 +9,29 @@ import AboutUs from './AboutUs';
 
 function App() {
   const [isInitialized, setIsInitialized] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate system boot-up time
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="boot-loader">
+        <div className="boot-content">
+          <div className="boot-logo">🌿</div>
+          <div className="boot-text-wrap">
+            <p className="boot-line">INITIALIZING NEXUS-AI...</p>
+            <p className="boot-line">CONNECTING TO ESP32 GATEWAY...</p>
+            <p className="boot-line">SYSTEM STATUS: <span className="green-glow">READY</span></p>
+          </div>
+          <div className="boot-bar"><div className="boot-progress"></div></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <Router>

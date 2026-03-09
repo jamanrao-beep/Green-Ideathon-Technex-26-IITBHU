@@ -1,17 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './DashboardMetrics.css';
 import ThermalAlert from './ThermalAlert';
 
 const Dashboard = () => {
+    const [isManual, setIsManual] = useState(false);
     return (
         <div className="dashboard-root fade-in">
             <Navbar />
 
+            <div className="telemetry-bar">
+                <div className="status-indicator">
+                    <span className="blink-dot"></span>
+                    <span className="status-text">MODE: <span className={isManual ? "orange-glow" : "green-glow"}>
+                        {isManual ? "MANUAL OVERRIDE" : "AI-AUTONOMOUS"}
+                    </span></span>
+                </div>
+                <div className="ticker-wrap">
+                    <div className="ticker-item">PUMP: <span className="green-glow">ACTIVE</span></div>
+                    <div className="ticker-separator">|</div>
+                    <div className="ticker-item">FLOW: <span className="green-glow">2.4 L/MIN</span></div>
+                    <div className="ticker-separator">|</div>
+                    <div className="ticker-item">CHIP TEMP: <span className="green-glow">38.2°C</span></div>
+                    <div className="ticker-separator">|</div>
+                    <div className="ticker-item">RECOVERY: <span className="green-glow">ENABLE</span></div>
+                </div>
+            </div>
+
             <ThermalAlert />
 
             <main className="dash-content">
+
+                {/* 2. The Toggle Switch UI */}
+                <div className="control-panel-card">
+                    <div className="control-info">
+                        <h3>System Control Logic</h3>
+                        <p>Switch between Nexus-AI regulation and manual pump override.</p>
+                    </div>
+
+                    <div className="toggle-container">
+                        <span className={`mode-label ${!isManual ? 'active-green' : ''}`}>AUTO</span>
+                        <label className="switch">
+                            <input
+                                type="checkbox"
+                                checked={isManual}
+                                onChange={() => setIsManual(!isManual)}
+                            />
+                            <span className="slider round"></span>
+                        </label>
+                        <span className={`mode-label ${isManual ? 'active-orange' : ''}`}>MANUAL</span>
+                    </div>
+                </div>
+
                 <header className="content-header">
                     <h1 className="emerald-text">System Command Center</h1>
                     <p>Jal Sanrakshan Buddhi | Direct-to-Chip Telemetry</p>

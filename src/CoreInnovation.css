@@ -75,7 +75,7 @@
     border-radius: 20px;
     padding: 25px;
     position: relative;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.4s ease;
     z-index: 2;
@@ -242,4 +242,149 @@
     color: #94a3b8;
     font-style: italic;
     text-align: left;
+}
+
+.heatmap-section {
+    margin: 80px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.sim-desc {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.heatmap-container {
+    background: #020f0c;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 24px;
+    padding: 50px;
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+/* The Processor Chip */
+.server-chip {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 40px auto;
+    background: #1e293b;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    border: 4px solid #334155;
+}
+
+.chip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 20px;
+}
+
+.core-cell {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: all 0.8s ease;
+}
+
+/* State: Overheating */
+.overheating {
+    box-shadow: 0 0 60px rgba(239, 68, 68, 0.5);
+    border-color: #ef4444;
+}
+.overheating .core-cell {
+    background: rgba(239, 68, 68, 0.3);
+    animation: flicker 2s infinite;
+}
+
+/* State: Chilled */
+.chilled {
+    box-shadow: 0 0 60px rgba(16, 185, 129, 0.4);
+    border-color: #10b981;
+}
+.chilled .core-cell {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+/* Coolant Pipe Visuals */
+.coolant-pipes {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.active-flow { opacity: 1; }
+
+.pipe-line {
+    height: 6px;
+    background: rgba(52, 211, 153, 0.2);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pipe-line::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #34d399, transparent);
+    animation: waterFlow 1.5s infinite linear;
+}
+
+@keyframes waterFlow {
+    100% { left: 100%; }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; filter: brightness(1.5); }
+}
+
+/* Controls */
+.simulation-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.temp-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.sim-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cool-btn { background: #10b981; color: #02110d; }
+.reset-btn { background: #ef4444; color: white; }
+
+.danger-text { color: #ef4444; text-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+.safe-text { color: #10b981; text-shadow: 0 0 10px rgba(16, 185, 129, 0.5); }
+
+/* Add this to CoreInnovation.css if you see errors */
+.heatmap-container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './DashboardMetrics.css';
+import ThermalHeatMap from './ThermalHeatMap';
 import './CoreInnovation.css';
 
 const CoreInnovation = () => {
@@ -98,6 +99,8 @@ const CoreInnovation = () => {
                     </section>
 
                 </div>
+
+                <ThermalHeatMap />
 
                 {/* EFFICIENCY COMPARISON: LIQUID vs. AIR */}
                 <section className="efficiency-comparison-section">
