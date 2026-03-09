@@ -1,64 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import './DiagnosticModal.css';
 
-const DiagnosticModal = ({ isOpen, onClose }) => {
-    const [steps, setSteps] = useState([
-        { id: 1, label: 'Initializing ESP32-S3 Link', status: 'pending' },
-        { id: 2, label: 'Calibrating Thermal Array (DS18B20)', status: 'pending' },
-        { id: 3, label: 'Pressurizing Hydraulic Circuit', status: 'pending' },
-        { id: 4, label: 'NEXUS-AI Pattern Sync', status: 'pending' },
-        { id: 5, label: 'Final Efficiency Audit', status: 'pending' },
-    ]);
+// 1. MUST include onComplete in the curly braces here!
+const DiagnosticModal = ({ isOpen, onClose, onComplete }) => {
+    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         if (isOpen) {
-            steps.forEach((step, index) => {
-                setTimeout(() => {
-                    setSteps(prev => prev.map(s =>
-                        s.id === step.id ? { ...s, status: 'complete' } : s
-                    ));
-                }, (index + 1) * 800);
-            });
+            document.body.style.overflow = 'hidden';
+            const timer = setInterval(() => {
+                setProgress(prev => {
+                    if (prev >= 100) {
+                        clearInterval(timer);
+                        // 2. This now works because it's defined above
+                        if (onComplete) onComplete();
+                        return 100;
+                    }
+                    return prev + 1;
+                });
+            }, 30);
+            return () => clearInterval(timer);
         } else {
-            // Reset when closed
-            setSteps(prev => prev.map(s => ({ ...s, status: 'pending' })));
+            document.body.style.overflow = 'unset';
+            setProgress(0);
         }
-    }, [isOpen]);
+    }, [isOpen, onComplete]); // 3. Added onComplete to dependency array
 
     if (!isOpen) return null;
 
     return (
-        <div className="modal-overlay">
-            <div className="diagnostic-card">
-                <div className="modal-header">
-                    <h3>SYSTEM DIAGNOSTIC v2.4</h3>
-                    <button className="close-btn" onClick={onClose}>×</button>
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="diagnostic-card-emerald" onClick={(e) => e.stopPropagation()}>
+                <div className="scanner-header">
+                    <div className="terminal-title">NEXUS_DIAGNOSTIC_PROTOCOL_v2</div>
+                    <button className="close-x" onClick={onClose}>[ CLOSE ]</button>
                 </div>
 
-                <div className="modal-body">
-                    <div className="scan-visual">
-                        <div className="wireframe-rack">
-                            <div className="scan-line"></div>
-                            {/* Simple CSS Grid representing a server rack */}
-                            {[...Array(9)].map((_, i) => <div key={i} className="rack-unit"></div>)}
-                        </div>
-                    </div>
-
-                    <div className="checklist">
-                        {steps.map(step => (
-                            <div key={step.id} className={`step-item ${step.status}`}>
-                                <span className="status-icon">{step.status === 'complete' ? '●' : '○'}</span>
-                                <span className="step-label">{step.label}</span>
-                                {step.status === 'complete' && <span className="done-tag">OK</span>}
-                            </div>
-                        ))}
+                <div className="scanner-visualizer">
+                    <div className="hex-grid"></div>
+                    <div className="scanning-bar"></div>
+                    <div className="center-target">
+                        <div className="target-ring"></div>
                     </div>
                 </div>
 
-                <div className="modal-footer">
-                    <div className="health-score">
-                        OVERALL HEALTH: <span className="score-num">98.4%</span>
+                <div className="status-container">
+                    <div className="progress-text">
+                        <span className="blink-text">{progress < 100 ? "ANALYZING THERMAL DEPOSIT..." : "ANALYSIS COMPLETE"}</span>
+                        <span>{progress}%</span>
                     </div>
+                    <div className="emerald-progress-bar">
+                        <div className="fill" style={{ width: `${progress}%` }}></div>
+                    </div>
+                </div>
+
+                <div className="modal-footer-info">
+                    <p>{progress < 100 ? "Please wait for sequence completion..." : "System Verified. You may close this window."}</p>
                 </div>
             </div>
         </div>

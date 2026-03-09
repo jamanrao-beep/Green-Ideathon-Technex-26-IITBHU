@@ -12,23 +12,20 @@ import DiagnosticModal from './DiagnosticModal';
 const Dashboard = () => {
     const [isManual, setIsManual] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isScanned, setIsScanned] = useState(false);
+
+    const handleScanComplete = () => {
+        setIsScanned(true); // This will trigger the badge appearance
+    };
+
     return (
         <div className="dashboard-root fade-in">
 
-            <button
-                className="analyze-btn"
-                onClick={() => setIsModalOpen(true)}
-            >
-                RUN SYSTEM ANALYSIS
-            </button>
-
-            <DiagnosticModal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-            />
 
             <CoolantSidebar isManual={isManual} />
             <Navbar />
+
+
 
             <div className="telemetry-bar">
                 <div className="status-indicator">
@@ -70,6 +67,31 @@ const Dashboard = () => {
                             <span className="slider round"></span>
                         </label>
                         <span className={`mode-label ${isManual ? 'active-orange' : ''}`}>MANUAL</span>
+                    </div>
+                </div>
+
+                <DiagnosticModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    onComplete={handleScanComplete}
+                />
+
+                <div className="centered-action-container">
+                    <div className="action-row">
+                        <button
+                            className={`analyze-btn ${isScanned ? 'scanned-state' : ''}`}
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            {isScanned ? "RE-RUN ANALYSIS" : "RUN SYSTEM ANALYSIS"}
+                        </button>
+
+                        {/* THE NEW BADGE */}
+                        {isScanned && (
+                            <div className="health-badge-emerald">
+                                <span className="badge-icon">🛡️</span>
+                                <span className="badge-text">SYSTEM HEALTH: OPTIMAL</span>
+                            </div>
+                        )}
                     </div>
                 </div>
 
