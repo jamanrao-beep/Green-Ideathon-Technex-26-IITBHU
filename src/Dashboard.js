@@ -70,6 +70,11 @@ const Dashboard = () => {
                     </div>
                 </div>
 
+                <header className="content-header">
+                    <h1 className="emerald-text">System Command Center</h1>
+                    <p>Jal Sanrakshan Buddhi | Direct-to-Chip Telemetry</p>
+                </header>
+
                 <DiagnosticModal
                     isOpen={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
@@ -94,11 +99,6 @@ const Dashboard = () => {
                         )}
                     </div>
                 </div>
-
-                <header className="content-header">
-                    <h1 className="emerald-text">System Command Center</h1>
-                    <p>Jal Sanrakshan Buddhi | Direct-to-Chip Telemetry</p>
-                </header>
 
                 {/* LAYER 1: Your Original 4 Core Metric Boxes */}
                 <div className="metrics-container">
