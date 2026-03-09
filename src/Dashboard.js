@@ -3,6 +3,9 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import './DashboardMetrics.css';
 import ThermalAlert from './ThermalAlert';
+import LiveTempChart from './LiveTempChart';
+import SystemTerminal from './SystemTerminal';
+import HealthPulse from './HealthPulse';
 
 const Dashboard = () => {
     const [isManual, setIsManual] = useState(false);
@@ -118,6 +121,14 @@ const Dashboard = () => {
                             *Calculated based on the Closed-Loop Direct Cooling architecture which eliminates freshwater addition and discharge[cite: 29, 31, 32].
                         </p>
                     </div>
+
+                    <section className="dashboard-chart-section">
+                        <LiveTempChart />
+                    </section>
+
+                    <section className="terminal-section">
+                        <SystemTerminal />
+                    </section>
 
                     <div className="metrics-row">
                         <div className="metric-card detail-card">

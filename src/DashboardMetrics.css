@@ -631,3 +631,75 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
     color: #f97316;
     text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
 }
+
+.chart-container {
+    background: rgba(4, 31, 24, 0.4);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.chart-title {
+    color: #10b981;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.dashboard-chart-section {
+    padding: 0 20px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.live-badge {
+    background: rgba(244, 63, 94, 0.1);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    animation: pulseRed 2s infinite;
+}
+
+@keyframes pulseRed {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Custom Tooltip Styling override */
+.recharts-tooltip-label {
+    color: #94a3b8 !important;
+    margin-bottom: 4px;
+}
+
+/* Making the chart area look deeper */
+.chart-container {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(16, 185, 129, 0.05);
+}
+
+.chart-footer-label {
+    margin-top: 15px;
+    font-size: 0.7rem;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.chart-title {
+    /* Glowing effect for the heading */
+    text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
