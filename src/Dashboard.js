@@ -6,11 +6,28 @@ import ThermalAlert from './ThermalAlert';
 import LiveTempChart from './LiveTempChart';
 import SystemTerminal from './SystemTerminal';
 import HealthPulse from './HealthPulse';
+import CoolantSidebar from './CoolantSidebar';
+import DiagnosticModal from './DiagnosticModal';
 
 const Dashboard = () => {
     const [isManual, setIsManual] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="dashboard-root fade-in">
+
+            <button
+                className="analyze-btn"
+                onClick={() => setIsModalOpen(true)}
+            >
+                RUN SYSTEM ANALYSIS
+            </button>
+
+            <DiagnosticModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
+
+            <CoolantSidebar isManual={isManual} />
             <Navbar />
 
             <div className="telemetry-bar">
