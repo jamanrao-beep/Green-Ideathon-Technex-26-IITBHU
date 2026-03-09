@@ -64,7 +64,7 @@ const LiveTempChart = () => {
                         />
 
                         <YAxis
-                            domain={[0, 100]} // Expanded to 100°C
+                            domain={[0, 120]} // Expanded to 125°C
                             stroke="#475569"
                             fontSize={12}
                             tickLine={false}
@@ -84,14 +84,14 @@ const LiveTempChart = () => {
                         />
 
                         {/* Safety Thresholds */}
-                        <ReferenceLine y={70} stroke="#ef4444" strokeDasharray="5 5" label={{ position: 'top', value: 'CRITICAL', fill: '#ef4444', fontSize: 10, fontWeight: 'bold' }} />
-                        <ReferenceLine y={50} stroke="#f59e0b" strokeDasharray="3 3" label={{ position: 'top', value: 'WARNING', fill: '#f59e0b', fontSize: 10 }} />
+                        <ReferenceLine y={85} stroke="#ef4444" strokeDasharray="5 5" label={{ position: 'top', value: 'CRITICAL', fill: '#ef4444', fontSize: 10, fontWeight: 'bold' }} />
+                        <ReferenceLine y={60} stroke="#f59e0b" strokeDasharray="3 3" label={{ position: 'top', value: 'WARNING', fill: '#f59e0b', fontSize: 10 }} />
 
                         <Area
                             type="monotone"
                             dataKey="temp"
                             stroke="#34d399"
-                            strokeWidth={3}
+                            strokeWidth={4}
                             fillOpacity={1}
                             fill="url(#colorThermal)"
                             animationDuration={1500}

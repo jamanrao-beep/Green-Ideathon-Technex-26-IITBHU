@@ -95,6 +95,10 @@ const Dashboard = () => {
                         </div>
                     </div>
 
+                    <div className="health-aside">
+                        <HealthPulse isManual={isManual} />
+                    </div>
+
                     {/* SUSTAINABILITY SCORE METER */}
                     <div className="sustainability-meter-container">
                         <h3 className="emerald-text">Sustainability Impact Score</h3>
