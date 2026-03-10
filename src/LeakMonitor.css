@@ -1,0 +1,92 @@
+.leak-monitor-card {
+    background: rgba(0, 43, 54, 0.4);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 250px;
+    transition: all 0.5s ease;
+}
+
+.monitor-title {
+    color: #00b4d8;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.gauge-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauge-bg {
+    fill: none;
+    stroke: rgba(0, 180, 216, 0.1);
+    stroke-width: 12;
+}
+
+.gauge-fill {
+    fill: none;
+    stroke: #00ffa8; /* Aqua Flow */
+    stroke-width: 12;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 0.8s ease, stroke 0.5s ease;
+}
+
+.gauge-value {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.gauge-value .number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e2e8f0;
+}
+
+.gauge-value .unit {
+    font-size: 0.6rem;
+    color: #94a3b8;
+}
+
+.status-indicator {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ffa8;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+.status-text {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #00ffa8;
+}
+
+/* Warning States */
+.pressure-warning { border-color: #fbbf24; }
+.pressure-warning .gauge-fill, .pressure-warning .status-text, .pressure-warning .pulse-dot {
+    stroke: #fbbf24; color: #fbbf24; background: #fbbf24;
+}
+
+.critical-leak { border-color: #ef4444; animation: shake 0.2s infinite; }
+.critical-leak .gauge-fill, .critical-leak .status-text, .critical-leak .pulse-dot {
+    stroke: #ef4444; color: #ef4444; background: #ef4444;
+}
+
+@keyframes blink { 50% { opacity: 0.3; } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }

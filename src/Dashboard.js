@@ -8,14 +8,21 @@ import SystemTerminal from './SystemTerminal';
 import HealthPulse from './HealthPulse';
 import CoolantSidebar from './CoolantSidebar';
 import DiagnosticModal from './DiagnosticModal';
+import LeakMonitor from './LeakMonitor';
+import AIToast from './AIToast';
 
 const Dashboard = () => {
     const [isManual, setIsManual] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isScanned, setIsScanned] = useState(false);
+    const [operatingMode, setOperatingMode] = useState(50);
 
     const handleScanComplete = () => {
         setIsScanned(true); // This will trigger the badge appearance
+    };
+
+    const getIntensityColor = () => {
+        return operatingMode > 70 ? '#00ffa8' : operatingMode < 30 ? '#2E8B57' : '#00b4d8';
     };
 
     return (
@@ -138,6 +145,8 @@ const Dashboard = () => {
                         <HealthPulse isManual={isManual} />
                     </div>
 
+                    <AIToast intensity={operatingMode} />
+
                     {/* SUSTAINABILITY SCORE METER */}
                     <div className="sustainability-meter-container">
                         <h3 className="emerald-text">Sustainability Impact Score</h3>
@@ -166,7 +175,10 @@ const Dashboard = () => {
                     </div>
 
                     <section className="dashboard-chart-section">
-                        <LiveTempChart />
+                        <div className="dashboard-grid">
+                            <LeakMonitor intensity={operatingMode} />
+                            <LiveTempChart intensity={operatingMode} />
+                        </div>
                     </section>
 
                     <section className="terminal-section">

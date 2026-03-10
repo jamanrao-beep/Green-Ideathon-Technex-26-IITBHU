@@ -5,9 +5,15 @@ import './DashboardMetrics.css';
 import './Architecture.css';
 import HardwareMap from './HardwareMap';
 import SustainabilityReport from './SustainabilityReport';
+import ComponentHealth from './ComponentHealth';
 
 const Architecture = () => {
     const [isManual, setIsManual] = useState(false);
+
+    const handleComponentClick = (id) => {
+        console.log(`Focusing on: ${id}`);
+        // Future step: Link this to HardwareMap highlighting
+    };
     return (
         <div className="dashboard-root fade-in">
             <Navbar />
@@ -96,6 +102,12 @@ const Architecture = () => {
                 <section className="arch-section">
                     <SustainabilityReport />
                 </section>
+
+                <div className="architecture-content">
+                    <HardwareMap isManual={isManual} />
+                    <ComponentHealth onComponentClick={handleComponentClick} />
+                    {/* ... */}
+                </div>
 
                 {/* LAYER 2: New Technical & Sustainability Integration */}
                 <div className="metric-card full-width innovation-gradient">

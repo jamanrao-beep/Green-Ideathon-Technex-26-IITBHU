@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
-const LiveTempChart = () => {
+const LiveTempChart = ({ intensity }) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
