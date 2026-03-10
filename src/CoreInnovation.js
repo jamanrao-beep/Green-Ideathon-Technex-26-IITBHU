@@ -4,6 +4,7 @@ import Footer from './Footer';
 import './DashboardMetrics.css';
 import ThermalHeatMap from './ThermalHeatMap';
 import './CoreInnovation.css';
+import FutureRoadmap from './FutureRoadmap';
 
 const CoreInnovation = () => {
     return (
@@ -141,6 +142,10 @@ const CoreInnovation = () => {
                     <div className="feasibility-note">
                         *Based on technical feasibility standards for industry-validated IoT microcontrollers and closed-loop hydraulic systems[cite: 67, 70, 72].
                     </div>
+                </section>
+
+                <section className="innovation-section">
+                    <FutureRoadmap />
                 </section>
 
                 {/* KINETIC SYSTEM SCHEMATIC */}
