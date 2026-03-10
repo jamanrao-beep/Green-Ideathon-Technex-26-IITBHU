@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🌊 Jal Sanrakshan Buddhi (JSB)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Aqua-Neural Nexus | Direct-to-Chip Sustainability
 
-## Available Scripts
+[![React](https://img.shields.io/badge/Frontend-React-008080.svg)](https://reactjs.org/)
+[![Sustainability](https://img.shields.io/badge/Impact-100%25_Water_Retention-10b981.svg)]()
+[![Hardware](https://img.shields.io/badge/Hardware-ESP32--S3-00ffa8.svg)]()
 
-In the project directory, you can run:
+**Jal Sanrakshan Buddhi** is an intelligent, closed-loop direct-to-chip liquid cooling solution designed to eliminate water waste and optimize thermal performance in high-density data centers. By integrating AI-driven autonomous regulation with high-fidelity telemetry, JSB provides a sustainable path for hyperscale computing.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Key Innovations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **⚡ Eco-Performance Slider**: A custom control interface allowing users to balance high-intensity AI workloads with energy-saving modes. The UI dynamically shifts from **Deep Sea Green** (Eco) to **Electric Aqua** (Overclock).
+- **🩺 Predictive Leak AI**: A specialized monitoring engine that simulates pressure fluctuations and predicts potential hardware failure through real-time PSI telemetry.
+- **📟 Hardware Health Ledger**: A live telemetry table tracking Uptime, Voltage, and Health for core components like the ESP32-S3 and Hydraulic Pump.
+- **💧 Sustainability Audit**: Real-time reporting on Water Recirculation (99.8%), Carbon Offset, and PUE ratings to verify environmental impact.
+- **🗺️ Neural Hardware Map**: An interactive digital twin of the cooling loop showing live flow rates and component synchronization.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Design Philosophy: "The Liquid Aesthetic"
 
-### `npm run build`
+The interface utilizes a sophisticated **Teal Blue** and **Sea Green** palette to reflect professional water-cooling environments.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Teal Blue (`#008080`)**: Representing structural integrity and the core interface framework.
+- **Sea Green/Aqua (`#00ffa8`)**: Representing dynamic liquid flow, active data, and high-energy states.
+- **Water Ripple Interaction**: Subtle global feedback mimicking a water surface whenever a user interacts with system nodes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+- **Frontend**: React.js utilizing Custom Hooks for high-frequency data simulation.
+- **Visuals**: Recharts for live thermal telemetry and dynamic area gradients.
+- **Animation**: CSS Keyframes for infinite liquid waves and sonar scanning effects.
+- **Styling**: Modern CSS variables for theme-wide color synchronization.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js (v16.0.0+)
+- npm or yarn
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1.  **Clone the repository**:
+    ```bash
+    git clone [https://github.com/jamanrao-beep/green-ideathon-technex-26-iitbhu.git](https://github.com/jamanrao-beep/green-ideathon-technex-26-iitbhu.git)
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Launch the Nexus**:
+    ```bash
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🗺️ Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Phase 1**: Prototyping single-node Direct-to-Chip setups (Current).
+- **Phase 2**: Multi-rack scaling and P2P (Pumped Two-Phase) cooling integration.
+- **Phase 3**: Full AI-automated PUE optimization and global carbon-neutral certification.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 👨‍💻 Meet the IIT Patna Team
 
-### Making a Progressive Web App
+- **Joginapally Aman Rao** ✦ _Team Leader, Full-Stack & ML Engineer_
+- **Perumalla Neha** — _Design & Machine Learning Engineer_
+- **Mahalakshmi Pattamsetti** — _Hardware Simulations & IoT Engineer_
+- **Krishna Teja Degala** — _IoT & Hardware Specialist_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_Developed for the Green Ideathon at Technex '26, IIT BHU._
