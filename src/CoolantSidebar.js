@@ -3,14 +3,14 @@ import './CoolantSidebar.css';
 
 const CoolantSidebar = ({ isManual }) => {
     return (
-        <div className={`coolant-sidebar ${isManual ? 'flow-fast' : 'flow-normal'}`}>
-            <div className="pipe-glow"></div>
-            <div className="particle-container">
-                {[...Array(10)].map((_, i) => (
-                    <div key={i} className="bubble"></div>
+        <div className={`coolant-sidebar ${isManual ? 'flow-alert' : 'flow-optimal'}`}>
+            <div className="pipe-structure"></div>
+            <div className="particle-flow">
+                {[...Array(12)].map((_, i) => (
+                    <div key={i} className="coolant-drop"></div>
                 ))}
             </div>
-            <div className="flow-label">HYDRAULIC FLOW</div>
+            <div className="sidebar-label">               HYDRAULIC_NEXUS</div>
         </div>
     );
 };

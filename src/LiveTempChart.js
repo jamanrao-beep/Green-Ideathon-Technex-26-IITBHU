@@ -90,7 +90,7 @@ const LiveTempChart = () => {
                         <Area
                             type="monotone"
                             dataKey="temp"
-                            stroke="#34d399"
+                            stroke="#00ffa8"
                             strokeWidth={4}
                             fillOpacity={1}
                             fill="url(#colorThermal)"

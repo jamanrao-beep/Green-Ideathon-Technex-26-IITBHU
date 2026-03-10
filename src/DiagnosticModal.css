@@ -1,4 +1,19 @@
 .diagnostic-card-emerald {
+    border-color: var(--bright-teal);
+    background: #001219; /* Very dark teal */
+    box-shadow: 0 0 40px rgba(0, 180, 216, 0.3);
+}
+
+.scanning-bar {
+    background: linear-gradient(to bottom, transparent, var(--liquid-cyan), transparent);
+}
+
+.emerald-progress-bar .fill {
+    background: linear-gradient(90deg, var(--primary-teal), var(--liquid-cyan));
+    box-shadow: 0 0 10px var(--liquid-cyan);
+}
+
+.diagnostic-card-emerald {
     background: #020d0b; /* Deepest Forest Green */
     border: 2px solid #10b981;
     width: 500px;
@@ -201,4 +216,34 @@
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
     opacity: 0.3;
+}
+
+.diagnostic-card-emerald {
+    border-color: var(--bright-teal);
+    background: #001219; /* Very dark teal */
+    box-shadow: 0 0 40px rgba(0, 180, 216, 0.3);
+}
+
+.scanning-bar {
+    background: linear-gradient(to bottom, transparent, var(--liquid-cyan), transparent);
+}
+
+.emerald-progress-bar .fill {
+    background: linear-gradient(90deg, var(--primary-teal), var(--liquid-cyan));
+    box-shadow: 0 0 10px var(--liquid-cyan);
+}
+
+.diagnostic-card-emerald {
+    background: #001219; /* Deep Teal background */
+    border: 2px solid var(--teal-bright);
+    box-shadow: 0 0 40px rgba(0, 180, 216, 0.3);
+}
+
+.scanning-bar {
+    background: linear-gradient(to bottom, transparent, var(--liquid-cyan), transparent);
+}
+
+.emerald-progress-bar .fill {
+    background: linear-gradient(90deg, var(--teal-main), var(--liquid-cyan));
+    box-shadow: 0 0 10px var(--liquid-cyan);
 }

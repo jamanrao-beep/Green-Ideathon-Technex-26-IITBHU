@@ -7,6 +7,34 @@
   transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Replace your existing glow classes */
+.green-glow {
+    color: var(--liquid-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 168, 0.6);
+}
+
+.card-teal {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card-teal:hover {
+    border-color: var(--bright-teal);
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
+}
+
+.analyze-btn {
+    border-color: var(--bright-teal);
+    color: var(--bright-teal);
+}
+
+.analyze-btn:hover {
+    background: var(--bright-teal);
+    color: var(--deep-bg);
+    box-shadow: 0 0 25px var(--bright-teal);
+}
+
 .dashboard-root.fade-in {
   opacity: 1;
 }
@@ -837,4 +865,49 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
     display: block;
     margin: 0; 
     /* ... keep your existing button styles ... */
+}
+
+.green-glow {
+    color: var(--liquid-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 168, 0.6);
+}
+
+.card-teal {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card-teal:hover {
+    border-color: var(--bright-teal);
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
+}
+
+.analyze-btn {
+    border-color: var(--bright-teal);
+    color: var(--bright-teal);
+}
+
+.analyze-btn:hover {
+    background: var(--bright-teal);
+    color: var(--deep-bg);
+    box-shadow: 0 0 25px var(--bright-teal);
+}
+
+.analyze-btn {
+    border: 1px solid var(--teal-bright);
+    color: var(--teal-bright);
+    background: rgba(0, 180, 216, 0.05);
+}
+
+.analyze-btn:hover {
+    background: var(--teal-bright);
+    color: var(--deep-ocean);
+    box-shadow: 0 0 20px var(--teal-bright);
+}
+
+.health-badge-emerald {
+    border-color: var(--liquid-cyan);
+    color: var(--liquid-cyan);
+    background: rgba(0, 255, 168, 0.1);
 }

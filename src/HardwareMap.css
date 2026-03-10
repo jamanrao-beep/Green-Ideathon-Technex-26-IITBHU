@@ -1,3 +1,17 @@
+.hw-node {
+    border-color: rgba(0, 128, 128, 0.5); /* Teal Border */
+}
+
+.flow-indicator {
+    background: var(--bright-teal);
+    box-shadow: 0 0 15px var(--liquid-cyan);
+}
+
+/* Update the lines to Sea Green */
+.hw-line {
+    background: rgba(0, 255, 168, 0.15);
+}
+
 .hardware-map-container {
     background: rgba(4, 31, 24, 0.4);
     border: 1px solid rgba(16, 185, 129, 0.2);
@@ -105,4 +119,18 @@
 @keyframes alertPulse {
     0%, 100% { box-shadow: 0 0 5px rgba(249, 115, 22, 0.2); }
     50% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+}
+
+.hw-node {
+    border-color: rgba(0, 128, 128, 0.5); /* Teal Border */
+}
+
+.flow-indicator {
+    background: var(--bright-teal);
+    box-shadow: 0 0 15px var(--liquid-cyan);
+}
+
+/* Update the lines to Sea Green */
+.hw-line {
+    background: rgba(0, 255, 168, 0.15);
 }

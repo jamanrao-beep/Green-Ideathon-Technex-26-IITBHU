@@ -27,3 +27,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  /* Main UI Colors - Teal Blue focus */
+  --primary-teal: #008080;
+  --bright-teal: #00b4d8;
+  --sea-green: #10b981;
+  --liquid-cyan: #00ffa8;
+  --teal-main: #008080;
+  --teal-bright: #00b4d8;
+  --sea-green: #2E8B57;
+  --liquid-cyan: #00ffa8;
+  --deep-ocean: #010a08;
+  
+  /* Backgrounds - Deep Water focus */
+  --deep-bg: #010a08;
+  --card-bg: rgba(0, 43, 54, 0.4); /* Dark Teal overlay */
+  
+  /* Text */
+  --text-main: #e2e8f0;
+  --text-dim: #94a3b8;
+}
+
+/* Update the Global Scrollbar to Liquid Teal */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-teal), var(--bright-teal), var(--primary-teal));
+    box-shadow: inset 0 0 10px rgba(0, 255, 168, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--teal-main), var(--teal-bright));
+    border: 2px solid var(--deep-ocean);
+    box-shadow: 0 0 10px var(--liquid-cyan);
+}
