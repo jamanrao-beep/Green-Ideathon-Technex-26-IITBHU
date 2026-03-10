@@ -1,0 +1,108 @@
+.hardware-map-container {
+    background: rgba(4, 31, 24, 0.4);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.map-title {
+    color: #10b981;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.map-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.hw-node {
+    background: #010a08;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 5;
+    transition: 0.3s;
+    min-width: 220px;
+}
+
+.hw-node:hover {
+    border-color: #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.node-icon { font-size: 1.5rem; }
+
+.node-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.node-label {
+    font-size: 0.65rem;
+    color: #94a3b8;
+    font-family: 'Courier New', monospace;
+}
+
+.node-status {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* The Connection Lines */
+.hw-line {
+    position: absolute;
+    background: rgba(16, 185, 129, 0.1);
+    z-index: 1;
+}
+
+.hw-line.horizontal {
+    width: 60%;
+    height: 2px;
+    top: 50%;
+}
+
+/* Moving Liquid Flow Animation */
+.flow-indicator {
+    width: 20px;
+    height: 100%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    position: absolute;
+    animation: flowAcross 3s linear infinite;
+}
+
+.flow-indicator.fast {
+    background: #f97316;
+    box-shadow: 0 0 10px #f97316;
+    animation-duration: 1s;
+}
+
+@keyframes flowAcross {
+    0% { left: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+.manual-pulse {
+    border-color: #f97316 !important;
+    animation: alertPulse 2s infinite;
+}
+
+@keyframes alertPulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(249, 115, 22, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+}
