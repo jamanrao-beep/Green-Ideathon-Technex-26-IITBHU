@@ -150,3 +150,26 @@
 ::-webkit-scrollbar-corner {
     background: #010a08;
 }
+
+/* Important: Elements must have position: relative for the ripple to work */
+.sustain-card, .analyze-btn, .hw-node, .timeline-card, .enter-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.water-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 255, 168, 0.3); /* Aqua Sea Green */
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    pointer-events: none;
+    z-index: 99;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

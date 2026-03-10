@@ -6,8 +6,10 @@ import CoreInnovation from './CoreInnovation.js';
 import './App.css';
 import Architecture from './Architecture';
 import AboutUs from './AboutUs';
+import { useWaterRipple } from './useWaterRipple';
 
 function App() {
+  useWaterRipple();
   const [isInitialized, setIsInitialized] = useState(false);
   const [loading, setLoading] = useState(true);
 
