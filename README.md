@@ -73,8 +73,8 @@ The interface utilizes a sophisticated **Teal Blue** and **Sea Green** palette t
 
 ## 👨‍💻 Meet the IIT Patna Team
 
-- **Joginapally Aman Rao** ✦ _Team Leader, Full-Stack & ML Engineer_
-- **Perumalla Neha** — _Design & Machine Learning Engineer_
+- **Perumalla Neha** — _Team Leader ,Design & Machine Learning Engineer_
+- **Joginapally Aman Rao** ✦ _Full-Stack & ML Engineer_
 - **Mahalakshmi Pattamsetti** — _Hardware Simulations & IoT Engineer_
 - **Krishna Teja Degala** — _IoT & Hardware Specialist_
 
