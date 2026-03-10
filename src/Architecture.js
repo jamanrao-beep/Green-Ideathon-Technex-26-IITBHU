@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './DashboardMetrics.css';
 import './Architecture.css';
+import HardwareMap from './HardwareMap';
+import SustainabilityReport from './SustainabilityReport';
 
 const Architecture = () => {
+    const [isManual, setIsManual] = useState(false);
     return (
         <div className="dashboard-root fade-in">
             <Navbar />
@@ -14,6 +17,13 @@ const Architecture = () => {
                     <h1 className="emerald-text">System Architecture</h1>
                     <p>The Aqua-Neural Nexus Infrastructure</p>
                 </header>
+
+                <button
+                    onClick={() => setIsManual(!isManual)}
+                    style={{ background: 'transparent', border: '1px solid #10b981', color: '#10b981', padding: '5px 15px', cursor: 'pointer', marginBottom: '20px' }}
+                >
+                    SIMULATE: {isManual ? 'MANUAL' : 'AUTO'}
+                </button>
 
                 {/* SECTION 1: DATA FLOW DIAGRAM (Visual Representation) */}
                 <section className="arch-section">
@@ -77,6 +87,14 @@ const Architecture = () => {
                             </tbody>
                         </table>
                     </div>
+                </section>
+
+                <section className="arch-section">
+                    <HardwareMap isManual={isManual} />
+                </section>
+
+                <section className="arch-section">
+                    <SustainabilityReport />
                 </section>
 
                 {/* LAYER 2: New Technical & Sustainability Integration */}
