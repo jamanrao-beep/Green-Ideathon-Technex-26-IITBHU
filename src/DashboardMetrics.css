@@ -941,6 +941,7 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
 /* Custom Slider Styling */
 .mode-slider {
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 4px;
     background: rgba(0, 180, 216, 0.2);

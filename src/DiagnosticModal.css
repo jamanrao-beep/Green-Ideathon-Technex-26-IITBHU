@@ -189,8 +189,8 @@
 
 /* 4. Fix any lingering blur in child elements */
 .scanner-visualizer {
-    backdrop-filter: none !important; /* Force remove blur */
     -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important; /* Force remove blur */
 }
 
 @keyframes modalAppear {

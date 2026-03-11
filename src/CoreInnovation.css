@@ -17,8 +17,8 @@
     position: relative;
     transition: all 0.4s ease;
     text-align: left;
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Fix for red lines */
+    backdrop-filter: blur(10px);
 }
 
 .innovation-card:hover {
@@ -75,8 +75,8 @@
     border-radius: 20px;
     padding: 25px;
     position: relative;
-    backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
     transition: all 0.4s ease;
     z-index: 2;
 }
