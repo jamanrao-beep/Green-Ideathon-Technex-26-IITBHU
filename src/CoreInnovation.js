@@ -21,7 +21,7 @@ const CoreInnovation = () => {
                     {/* Step 1: Intelligence Hub */}
                     <div className="innovation-card">
                         <div className="card-step">01</div>
-                        <div className="icon-box">🧠</div>
+                        <div className="icon-box"></div>
                         <h3>AI Sensing Hub</h3>
                         <p>
                             Utilizes an <strong>ESP32 central controller</strong> to process high-fidelity data from a <strong>DS18B20 thermal array</strong>[cite: 38, 60].
@@ -32,7 +32,7 @@ const CoreInnovation = () => {
                     {/* Step 2: Surgical Extraction */}
                     <div className="innovation-card">
                         <div className="card-step">02</div>
-                        <div className="icon-box pulse">💧</div>
+                        <div className="icon-box pulse"></div>
                         <h3>Surgical Cooling</h3>
                         <p>
                             Triggered by an <strong>intelligent relay module</strong>, a 12V pump circulates coolant through <strong>copper cold plates</strong>[cite: 13, 15, 38].
@@ -43,7 +43,7 @@ const CoreInnovation = () => {
                     {/* Step 3: Sustainable Transport */}
                     <div className="innovation-card">
                         <div className="card-step">03</div>
-                        <div className="icon-box">🔄</div>
+                        <div className="icon-box"></div>
                         <h3>Closed-Loop Flow</h3>
                         <p>
                             A fully recirculating hydraulic architecture that ensures <strong>zero fresh water addition</strong> and <strong>no evaporation loss</strong>[cite: 29, 30].
@@ -54,7 +54,7 @@ const CoreInnovation = () => {
                     {/* Step 4: Asset Transformation */}
                     <div className="innovation-card recovery-glow">
                         <div className="card-step">04</div>
-                        <div className="icon-box">🌿</div>
+                        <div className="icon-box"></div>
                         <h3>Thermal Asset</h3>
                         <p>
                             Captured energy is deposited into a <strong>Thermal Storage Bank</strong>[cite: 41, 99].
@@ -157,7 +157,7 @@ const CoreInnovation = () => {
                         {/* Step 1: Intelligence Hub */}
                         <div className="node intelligence-hub">
                             <div className="node-glow"></div>
-                            <div className="node-icon">🧠</div>
+                            <div className="node-icon"></div>
                             <h4>AI Control</h4>
                             <span className="node-tag">ESP32 + DS18B20</span>
                         </div>
@@ -166,7 +166,7 @@ const CoreInnovation = () => {
                         <div className="hydraulic-loop">
                             {/* Stage 2: Extraction */}
                             <div className="node stage-box">
-                                <div className="stage-icon">🔬</div>
+                                <div className="stage-icon"></div>
                                 <p>Direct-to-Chip</p>
                                 <span className="status-label">Heat Extraction</span>
                             </div>
@@ -177,7 +177,7 @@ const CoreInnovation = () => {
 
                             {/* Stage 3: Storage */}
                             <div className="node stage-box">
-                                <div className="stage-icon">🏢</div>
+                                <div className="stage-icon"></div>
                                 <p>Thermal Bank</p>
                                 <span className="status-label">Energy Storage</span>
                             </div>
@@ -188,7 +188,7 @@ const CoreInnovation = () => {
 
                             {/* Stage 4: Asset Transformation */}
                             <div className="node stage-box highlight-gold">
-                                <div className="stage-icon">⚡</div>
+                                <div className="stage-icon"></div>
                                 <p>Energy Asset</p>
                                 <span className="status-label">Heat Recovery</span>
                             </div>

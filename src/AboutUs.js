@@ -30,8 +30,8 @@ const AboutUs = ({ backgroundImage }) => {
                     </p>
 
                     <div className="stats-row">
-                        <div className="stat-badge"><span>🎓</span> IIT Patna Team</div>
-                        <div className="stat-badge"><span>📍</span> IIT BHU Technex</div>
+                        <div className="stat-badge"><span></span> IIT Patna Team</div>
+                        <div className="stat-badge"><span></span> IIT BHU Technex</div>
                         <div className="stat-badge" style={{ borderColor: '#10b981', color: '#10b981' }}><span>💧</span> 40% Water Saved</div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ const AboutUs = ({ backgroundImage }) => {
                     </p>
 
                     <div className="showcase-badge">
-                        <span>🏆</span> Technex '26 Finalist Team
+                        <span></span> Technex '26 Finalist Team
                     </div>
 
                     <div className="showcase-tech-row">

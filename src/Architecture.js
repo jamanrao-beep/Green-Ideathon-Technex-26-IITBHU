@@ -36,22 +36,22 @@ const Architecture = () => {
                     <h2 className="section-subtitle">Data Pipeline Flow</h2>
                     <div className="flow-container">
                         <div className="flow-step">
-                            <div className="flow-icon">🌡️</div>
+                            <div className="flow-icon"></div>
                             <p>Sensors (DS18B20/YF-S201)</p>
                         </div>
                         <div className="flow-arrow">➜</div>
                         <div className="flow-step">
-                            <div className="flow-icon">📡</div>
+                            <div className="flow-icon"></div>
                             <p>ESP32 Node (Edge Processing)</p>
                         </div>
                         <div className="flow-arrow">➜</div>
                         <div className="flow-step">
-                            <div className="flow-icon">🧠</div>
+                            <div className="flow-icon"></div>
                             <p>Nexus AI (LSTM Model)</p>
                         </div>
                         <div className="flow-arrow">➜</div>
                         <div className="flow-step">
-                            <div className="flow-icon">💻</div>
+                            <div className="flow-icon"></div>
                             <p>Command Dashboard</p>
                         </div>
                     </div>

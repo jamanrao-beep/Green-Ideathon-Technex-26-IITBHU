@@ -15,10 +15,10 @@ const SustainabilityReport = () => {
     }, []);
 
     const stats = [
-        { label: "WATER RECIRCULATION", value: "99.8%", desc: "Closed-loop efficiency", icon: "💧" },
-        { label: "ENERGY SAVINGS", value: "42%", desc: "vs. Traditional HVAC", icon: "⚡" },
-        { label: "CARBON OFFSET", value: "12.4kg", desc: "Monthly CO2 reduction", icon: "🌿" },
-        { label: "PUE RATING", value: "1.08", desc: "Industry-leading efficiency", icon: "📈" }
+        { label: "WATER RECIRCULATION", value: "99.8%", desc: "Closed-loop efficiency" },
+        { label: "ENERGY SAVINGS", value: "42%", desc: "vs. Traditional HVAC" },
+        { label: "CARBON OFFSET", value: "12.4kg", desc: "Monthly CO2 reduction" },
+        { label: "PUE RATING", value: "1.08", desc: "Industry-leading efficiency" }
     ];
 
     return (

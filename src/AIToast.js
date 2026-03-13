@@ -21,7 +21,7 @@ const AIToast = ({ intensity }) => {
         <div className="ai-toast">
             <div className="toast-border"></div>
             <div className="toast-content">
-                <span className="toast-icon">🤖</span>
+                <span className="toast-icon"></span>
                 <span className="toast-text">{message}</span>
             </div>
             <div className="toast-progress-bar"></div>
