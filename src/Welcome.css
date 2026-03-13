@@ -77,8 +77,8 @@
   position: relative;
   z-index: 10;
   width: 90%;
-  max-width: 650px;
-  min-height: 400px;
+  max-width: 850px;
+  min-height: 450px;
   background: rgba(10, 25, 47, 0.7); 
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
@@ -136,18 +136,21 @@
 }
 
 .hero-title {
-  color: #ffffff;
-  font-size: clamp(1.8rem, 6vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: 1px;
+    margin-top: 0;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); 
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1; /* Keeps lines close together for a blocky look */
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.3); /* Subtly adds glow to text */
 }
 
 .theme-subtitle {
-    margin-bottom: 15px; /* Reduced from 30px or default */
-    font-size: 1rem;
-    letter-spacing: 3px;
+    margin-bottom: 16px; 
+    font-size: 1.5rem; 
+    font-weight: 600;  /* Made it slightly thicker */
+    letter-spacing: 6px; /* Increased letter spacing for premium tech feel */
     color: #a7f3d0;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 /* --- Late & Smooth Button Entry --- */
@@ -186,14 +189,14 @@
 
 /* Decreased space between logo and title */
 .welcome-logo {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 5px; /* Reduced from 20px to 5px */
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0px; 
     filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.6));
 }
 
 .hero-title {
-    margin-top: 0; /* Remove top margin to pull it closer to logo */
+    margin-top: 20px; /* Remove top margin to pull it closer to logo */
     font-size: 3rem;
     font-weight: 900;
     color: #fff;
@@ -235,4 +238,28 @@
     box-shadow: 0 0 20px #00f3ff;
     background: rgba(0, 243, 255, 0.1);
     transform: scale(1.05);
+}
+
+.event-brand {
+    color: #00f3ff;
+    letter-spacing: 16px;
+    font-size: 1.2rem; /* Increased from 0.95rem */
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.enter-btn {
+    padding: 20px 60px; /* Increased padding */
+    font-size: 1.25rem;  
+    font-weight: 900;
+    background: transparent;
+    color: #00f3ff;
+    border: 3px solid #00f3ff; /* Thicker border */
+    cursor: pointer;
+    letter-spacing: 4px; /* Added spacing to button text */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin-top: 20px;
 }
