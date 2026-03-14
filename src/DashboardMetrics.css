@@ -976,7 +976,7 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
   color: #f8fafc;
   padding: 14px 28px;
   border-radius: 12px;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
