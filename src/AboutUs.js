@@ -32,7 +32,7 @@ const AboutUs = ({ backgroundImage }) => {
                     <div className="stats-row">
                         <div className="stat-badge"><span></span> IIT Patna Team</div>
                         <div className="stat-badge"><span></span> IIT BHU Technex</div>
-                        <div className="stat-badge" style={{ borderColor: '#10b981', color: '#10b981' }}><span>💧</span> 40% Water Saved</div>
+                        <div className="stat-badge" style={{ borderColor: '#10b981', color: '#103db9' }}> 40% Water Saved</div>
                     </div>
                 </div>
             </div>
