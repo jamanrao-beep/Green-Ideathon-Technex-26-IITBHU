@@ -132,19 +132,19 @@ const AboutUs = ({ backgroundImage }) => {
 
                     <div className="showcase-tech-row">
                         <div className="tech-item">
-                            <div className="tech-icon">🔬</div>
+
                             <span>Direct-to-Chip</span>
                         </div>
                         <div className="tech-item">
-                            <div className="tech-icon">🤖</div>
+
                             <span>AI Optimization</span>
                         </div>
                         <div className="tech-item">
-                            <div className="tech-icon">📟</div>
+
                             <span>IoT Node</span>
                         </div>
                         <div className="tech-item">
-                            <div className="tech-icon">🌿</div>
+
                             <span>Sustainability</span>
                         </div>
                     </div>

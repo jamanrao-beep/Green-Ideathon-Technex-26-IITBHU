@@ -9,7 +9,7 @@ const HardwareMap = ({ isManual }) => {
             <div className="map-grid">
                 {/* Node 1: Direct-to-Chip Block */}
                 <div className="hw-node chip-node">
-                    <div className="node-icon">🔳</div>
+
                     <div className="node-info">
                         <span className="node-label">NVIDIA A100 UNIT</span>
                         <span className="node-status green-glow">THERMAL SYNC: ACTIVE</span>
@@ -23,7 +23,7 @@ const HardwareMap = ({ isManual }) => {
 
                 {/* Node 2: Hydraulic Pump */}
                 <div className={`hw-node pump-node ${isManual ? 'manual-pulse' : ''}`}>
-                    <div className="node-icon">🌀</div>
+
                     <div className="node-info">
                         <span className="node-label">HYDRAULIC PUMP v2</span>
                         <span className="node-status">
@@ -36,7 +36,7 @@ const HardwareMap = ({ isManual }) => {
 
                 {/* Node 3: Liquid Reservoir */}
                 <div className="hw-node reservoir-node">
-                    <div className="node-icon">💧</div>
+
                     <div className="node-info">
                         <span className="node-label">COOLANT BANK</span>
                         <span className="node-status green-glow">LEVEL: 94%</span>
