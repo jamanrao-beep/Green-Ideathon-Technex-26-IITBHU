@@ -8,21 +8,21 @@ const FutureRoadmap = () => {
             date: "Current - Q2 2026",
             goals: ["ESP32-S3 Integration", "Single-Node Direct-to-Chip setup", "NEXUS-AI Algorithm Alpha"],
             status: "In Progress",
-            icon: "color: #2196F3; font-size: 1.5em;" // Blue color for current phase
+            icon: "color: #2196F3" // Blue color for current phase
         },
         {
             title: "Phase 2: Multi-Rack Scale",
             date: "Q4 2026",
             goals: ["Pumped Two-Phase (P2P) cooling", "Edge Computing integration", "40% Energy Reduction Audit"],
             status: "Planned",
-            icon: "color : #FF9800; font-size: 1.5em;" // Orange color for planned phase
+            icon: "color : #FF9800" // Orange color for planned phase
         },
         {
             title: "Phase 3: Hyperscale",
             date: "2027+",
             goals: ["District Heating reuse", "Full AI-Automated PUE Optimization", "Carbon-Neutral certification"],
             status: "Vision",
-            icon: "color: #4CAF50; font-size: 1.5em;" // Green color for future vision
+            icon: "color: #4CAF50"// Green color for future vision
         }
     ];
 

@@ -107,6 +107,15 @@ const Dashboard = () => {
                     </div>
                 </div>
 
+                <div className="forecast-wrapper">
+                    <button
+                        className="ai-portal-btn"
+                        onClick={() => window.open('http://localhost:8501/', '_blank')}
+                    >
+                        Launch water efficiency AI
+                    </button>
+                </div>
+
                 {/* LAYER 1: Your Original 4 Core Metric Boxes */}
                 <div className="metrics-container">
                     <div className="metrics-row">
