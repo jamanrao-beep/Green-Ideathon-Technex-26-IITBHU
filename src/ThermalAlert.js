@@ -18,7 +18,6 @@ const ThermalAlert = () => {
         <div className="alert-overlay">
             <div className="alert-box">
                 <div className="alert-header">
-                    <span className="alert-icon">⚠️</span>
                     <h3>Thermal Anomaly Detected</h3>
                 </div>
                 <p><strong>DS18B20 Array</strong> reporting critical chip temperature.</p>
