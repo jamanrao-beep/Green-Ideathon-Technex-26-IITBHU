@@ -972,7 +972,6 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
 
 .ai-portal-btn {
   background: rgba(30, 64, 175, 0.2); /* Deep bluish glass base */
-  filter: blur(10px);
   border: 1px solid rgba(59, 130, 246, 0.5); /* Blue border */
   color: #f8fafc;
   padding: 14px 28px;
@@ -990,7 +989,6 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
 
 .ai-portal-btns {
   background: rgba(30, 64, 175, 0.2); /* Deep bluish glass base */
-  filter: blur(10px);
   border: 1px solid rgba(59, 130, 246, 0.5); /* Blue border */
   color: #f8fafc;
   padding: 14px 28px;
