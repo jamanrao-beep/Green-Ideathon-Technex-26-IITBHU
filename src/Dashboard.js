@@ -110,7 +110,7 @@ const Dashboard = () => {
                 <div className="forecast-wrapper">
                     <button
                         className="ai-portal-btn"
-                        onClick={() => window.open('http://localhost:8501/', '_blank')}
+                        onClick={() => window.open('https://friendly-disco-69xvr4wjx6v5fjgw-8502.app.github.dev/', '_blank')}
                     >
                         Launch water efficiency AI
                     </button>
