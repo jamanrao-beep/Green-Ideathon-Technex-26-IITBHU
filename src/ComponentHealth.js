@@ -3,10 +3,10 @@ import './ComponentHealth.css';
 
 const ComponentHealth = ({ onComponentClick }) => {
     const components = [
-        { id: 'esp32', name: "ESP32-S3 Microcontroller", health: 98, voltage: "3.32V", uptime: "142h", icon: "color: #60f321; font-size: 1.5em;" },
-        { id: 'pump', name: "Hydraulic Pump v2", health: 94, voltage: "12.1V", uptime: "88h", icon: "color: #0026ff; font-size: 1.5em;" },
-        { id: 'sensor', name: "DS18B20 Temp Probe", health: 100, voltage: "4.98V", uptime: "1052h", icon: "color: #f3214f; font-size: 1.5em;" },
-        { id: 'block', name: "Direct-to-Chip Cold Plate", health: 99, voltage: "N/A", uptime: "210h", icon: "color: #129ad4; font-size: 1.5em;" }
+        { id: 'esp32', name: "ESP32-S3 Microcontroller", health: 98, voltage: "3.32V", uptime: "142h" },
+        { id: 'pump', name: "Hydraulic Pump v2", health: 94, voltage: "12.1V", uptime: "88h" },
+        { id: 'sensor', name: "DS18B20 Temp Probe", health: 100, voltage: "4.98V", uptime: "1052h" },
+        { id: 'block', name: "Direct-to-Chip Cold Plate", health: 99, voltage: "N/A", uptime: "210h" }
     ];
 
     return (
